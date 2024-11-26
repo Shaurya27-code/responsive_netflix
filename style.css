@@ -1,0 +1,755 @@
+body {
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(9, 9, 9);
+}
+
+
+
+/* mediaquery breakpoints
+
+big screen => 990 and above
+medium screen => 580px to 990px
+small screen =>586 and small
+
+ */
+/* big screen */
+@media (min-width : 990px){
+    .hero {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .hero-img {
+        width: 100%;
+        transform: scale(1.4);
+        /* scale increases the size */
+    
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        top: 0;
+        bottom: -3px;
+        right: 0;
+        left: 0;
+    
+        background-image: linear-gradient(7deg, rgba(0, 0, 0, 0.5) 10.00%, rgba(0, 0, 0, 0.48) 17.25%, rgba(0, 0, 0, 0.46) 24.50%, rgba(0, 0, 0, 0.43) 31.75%, rgba(0, 0, 0, 0.4) 39.00%, rgba(0, 0, 0, 0.37) 46.25%, rgba(0, 0, 0, 0.35) 53.50%, rgba(0, 0, 0, 0.32) 60.75%, rgba(0, 0, 0, 0.3) 68.00%, rgba(0, 0, 0, 0.28) 75.25%, rgba(0, 0, 0, 0.26) 82.50%, rgba(0, 0, 0, 0.25) 89.75%, rgba(0, 0, 0, 0.24) 97.00%);
+    
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: white;
+        width: 850px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        /* translate => first value is x-axis and second value is y-axis */
+    }
+    
+    .navbar {
+    
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 990px;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+    
+    .logo {
+        color: red;
+        height: 140px;
+        width: 140px;
+        margin-top: 120px;
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .login-btn {
+        padding: 8px 30px;
+        border: none;
+        background-color: red;
+        color: white;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    
+    .en-btn {
+        background-color: #0000006e;
+        color: white;
+        border: 1px solid #eeeeee87;
+        padding: 8px 30px;
+        border-radius: 6px;
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 4vmax;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .description {
+        font-size: 18px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.551);
+        border: 1px solid #eeeeee70;
+        border-radius: 4px;
+    }
+    
+    .content-flex {
+        display: flex;
+        justify-content: center;
+        gap: 14px
+    }
+    
+    .content-btn {
+        padding: 12px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 190px;
+        justify-content: center;
+    }
+    
+    .container {
+        color: white;
+        display: flex;
+        width: 990px;
+        margin: 100px auto;
+        gap: 80px;
+        align-items: center;
+    
+    }
+    
+    .left {
+        width: 50%;
+    }
+    
+    .right {
+        width: 50%;
+    }
+    
+    .tv {
+        width: 100%;
+        position: relative;
+        /* height: 480px;
+        width: 800px;
+        z-index: 1;
+        display: none; */
+    }
+    
+    /* .video {
+        width: 80%;
+        position: absolute;
+        z-index: 1;
+        top: 130px;
+        left: -93px;
+        height: 965px;
+        margin-top: -376px;
+        margin-left: 190px;
+    } */
+    
+    .video{
+        margin-left: 66px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .video1{
+    
+        margin-left: 86px;
+        margin-top: 36px;
+        width: 62%;
+        object-fit: contain;
+        position: absolute;
+    
+    }
+    
+    .real-tv{
+        width: 495px;
+        display: block;
+        position: relative;
+    }
+    
+    .heading {
+        font-size: 48px;
+    }
+    
+    .sub-heading {
+        font-size: 24px;
+    }
+    
+    section {
+        border-bottom: 8px solid #757474bd;
+        overflow: hidden;
+    }
+    
+    .h1 {
+        color: white;
+        font-size: 50px;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .faq1 {
+    
+        border: 2px solid #757474bd;
+        width: 1000px;
+        border-radius: 14px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    
+    }
+    
+    .faq1:hover{
+        background-color: rgb(93, 92, 92);
+    }
+    
+    .faq {
+        margin-left: 130px;
+    }
+    
+    .h3 {
+        color: white;
+    }
+}
+
+/* medium screen */
+@media (min-width : 586px) and (max-width : 990px){
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .hero-img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        transform: scale(1.2);
+        /* scale increases the size */
+    
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        top: 0;
+        bottom: -3px;
+        right: 0;
+        left: 0;
+    
+        background-image: linear-gradient(7deg, rgba(0, 0, 0, 0.5) 10.00%, rgba(0, 0, 0, 0.48) 17.25%, rgba(0, 0, 0, 0.46) 24.50%, rgba(0, 0, 0, 0.43) 31.75%, rgba(0, 0, 0, 0.4) 39.00%, rgba(0, 0, 0, 0.37) 46.25%, rgba(0, 0, 0, 0.35) 53.50%, rgba(0, 0, 0, 0.32) 60.75%, rgba(0, 0, 0, 0.3) 68.00%, rgba(0, 0, 0, 0.28) 75.25%, rgba(0, 0, 0, 0.26) 82.50%, rgba(0, 0, 0, 0.25) 89.75%, rgba(0, 0, 0, 0.24) 97.00%);
+    
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        /* translate => first value is x-axis and second value is y-axis */
+    }
+    
+    .navbar {
+    
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100vw - 80px);
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+    
+    .logo {
+        color: red;
+        height: 100px;
+        width: 100px;
+        margin-top: 80px;
+        
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .login-btn {
+        padding: 8px 30px;
+        border: none;
+        background-color: red;
+        color: white;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    
+    .en-btn {
+        background-color: #0000006e;
+        color: white;
+        border: 1px solid #eeeeee87;
+        padding: 8px 30px;
+        border-radius: 6px;
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 5vmax;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .description {
+        font-size: 18px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.551);
+        border: 1px solid #eeeeee70;
+        border-radius: 4px;
+    }
+    
+    .content-flex {
+        display: flex;
+        justify-content: center;
+        gap: 14px
+    }
+    
+    .content-btn {
+        padding: 12px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 190px;
+        justify-content: center;
+    }
+    
+    .container {
+        color: white;
+    
+       
+        margin: 100px auto;
+       
+    
+    }
+    
+    .left {
+
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .right {
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .tv {
+        width: 100%;
+        position: relative;
+        /* height: 480px;
+        width: 800px;
+        z-index: 1;
+        display: none; */
+    }
+    
+    /* .video {
+        width: 80%;
+        position: absolute;
+        z-index: 1;
+        top: 130px;
+        left: -93px;
+        height: 965px;
+        margin-top: -376px;
+        margin-left: 190px;
+    } */
+    
+    .video{
+        margin-left: 66px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .video1{
+    
+        margin-left: 86px;
+        margin-top: 36px;
+        width: 62%;
+        object-fit: contain;
+        position: absolute;
+    
+    }
+    
+    .real-tv{
+        width: 70vw;
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+    
+    .heading {
+        font-size: 5vmax;
+    }
+    
+    .sub-heading {
+        font-size: 2.75vmax;
+    }
+    
+    section {
+        border-bottom: 8px solid #757474bd;
+        overflow: hidden;
+    }
+    
+    .h1 {
+        color: white;
+        font-size: 5vmax;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .faq1 {
+    
+        border: 2px solid #757474bd;
+        width: calc(80vw - 70px);
+        border-radius: 14px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    
+    }
+    
+    .faq1:hover{
+        background-color: rgb(93, 92, 92);
+    }
+    
+    .faq {
+        margin-left: 130px;
+    }
+    
+    .h3 {
+        color: white;
+    }
+
+
+}
+
+@media (max-width : 585px){
+
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .hero-img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        transform: scale(1.2);
+        /* scale increases the size */
+    
+    }
+    
+    .tint {
+        background-color: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        top: 0;
+        bottom: -3px;
+        right: 0;
+        left: 0;
+    
+        background-image: linear-gradient(7deg, rgba(0, 0, 0, 0.5) 10.00%, rgba(0, 0, 0, 0.48) 17.25%, rgba(0, 0, 0, 0.46) 24.50%, rgba(0, 0, 0, 0.43) 31.75%, rgba(0, 0, 0, 0.4) 39.00%, rgba(0, 0, 0, 0.37) 46.25%, rgba(0, 0, 0, 0.35) 53.50%, rgba(0, 0, 0, 0.32) 60.75%, rgba(0, 0, 0, 0.3) 68.00%, rgba(0, 0, 0, 0.28) 75.25%, rgba(0, 0, 0, 0.26) 82.50%, rgba(0, 0, 0, 0.25) 89.75%, rgba(0, 0, 0, 0.24) 97.00%);
+    
+    }
+    
+    .content {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: white;
+        width: 88vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        /* translate => first value is x-axis and second value is y-axis */
+    }
+    
+    .navbar {
+    
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: calc(100vw - 40px);
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+    }
+    
+    .logo {
+        color: red;
+        height: 100px;
+        width: 100px;
+        margin-top: 76px;
+    }
+    
+    .nav-flex {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .login-btn {
+        padding: 8px 30px;
+        border: none;
+        background-color: red;
+        color: white;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+    
+    .en-btn {
+        background-color: #0000006e;
+        color: white;
+        border: 1px solid #eeeeee87;
+        padding: 8px 30px;
+        border-radius: 6px;
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 5vmax;
+    }
+    
+    .sub-title {
+        font-size: 26px;
+    }
+    
+    .description {
+        font-size: 18px;
+    }
+    
+    .content-input {
+        width: 320px;
+        padding: 14px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.551);
+        border: 1px solid #eeeeee70;
+        border-radius: 4px;
+    }
+
+    .content-input:focus{
+        outline: 2px solid white;
+    }
+    
+    .content-flex {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+    
+    .content-btn {
+        padding: 12px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 190px;
+        justify-content: center;
+    }
+    
+    .container {
+        color: white;
+    
+       
+        margin: 100px auto;
+       
+    
+    }
+    
+    .left {
+
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .right {
+        width: 80vw;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .tv {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        /* height: 480px;
+        width: 800px;
+        z-index: 1;
+        display: none; */
+    }
+    
+    /* .video {
+        width: 80%;
+        position: absolute;
+        z-index: 1;
+        top: 130px;
+        left: -93px;
+        height: 965px;
+        margin-top: -376px;
+        margin-left: 190px;
+    } */
+    
+    .video{
+        margin-left: 46px;
+        width: 80%;
+        height: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+    
+    .video1{
+    
+        margin-left: 66px;
+        margin-top: 26px;
+        width: 62%;
+        object-fit: contain;
+        position: absolute;
+    
+    }
+    
+    .real-tv{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin: auto;
+       
+    }
+    
+    .heading {
+        font-size: 5vmax;
+    }
+    
+    .sub-heading {
+        font-size: 2.75vmax;
+    }
+    
+    section {
+        border-bottom: 8px solid #757474bd;
+        overflow: hidden;
+    }
+    
+    .h1 {
+        color: white;
+        font-size: 5vmax;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    .faq1 {
+    
+        border: 2px solid #757474bd;
+        width: calc(80vw - 70px);
+        border-radius: 14px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    
+    }
+    
+    .faq1:hover{
+        background-color: rgb(93, 92, 92);
+    }
+    
+    .faq {
+        margin: 60px auto;
+    }
+    
+    .h3 {
+        color: white;
+    }
+
+   
+}
